@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   
-  <title>���޵ĵ�һƪ����</title>
+  <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="���޵ĵ�һƪ����">
+<meta property="og:title">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="���޵ĵ�һƪ����">
+<meta property="og:site_name">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="���޵ĵ�һƪ����">
+<meta name="twitter:title">
   
-    <link rel="alternate" href="/atom.xml" title="���޵ĵ�һƪ����" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,8 +33,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">���޵ĵ�һƪ����</a>
+        <a href="/" id="logo"></a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">李洲的博客</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -48,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -83,12 +87,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>1、下载<br>2、安装</p>
+        <p>Hexo个人微博搭建</p>
+<p>Hexo搭建分为以下几个步骤<br>1.搭建环境准备（包括node.js和git环境，gitHub账户的配置）<br>2.安装Hexo<br>3.配置Hexo<br>4.申请GitHub账号<br>5.申请外网域名（可用）<br>6.本地hexo与GitHub pages绑定</p>
+<p>1.1.1：<br>Node.js环境搭建步骤：<br>1）：下载Node.js安装文件：安装包分为32位与64位<br>2）：安装界面</p>
+<p>3）：打开CMD输入如下命名确认是否安装成功Node.js<br>1：node -v      2:npm -v</p>
+<p>1:Git环境搭建<br>Git环境搭建步骤：<br>1）：下载Git安装包<br>2）：运行安装包如下</p>
+<p>Git安装界面</p>
+<p>Git PATH设置</p>
+<p>   3):检查是否安装成功,输入git –service如图则表示安装成功</p>
+<p>1.1.3:<br>gitHub账号申请,环境搭建：<br>1):  输入<a href="https://github.com/" target="_blank" rel="external">https://github.com/</a> 申请gitHub账号<br>2)：登陆之后，创建代码库，点击页面右上角的加号，选择New repository</p>
+<p>3）进入代码库创建页面:在Repository name下填写                   youname.github.io,Description(optional)下填写一些简单的    描述（不写也没关系）,如图所示</p>
+<p>注意:比如github名称是gdutxiaoxu,这里就填写    gdutxiaoxu.github.io.<br>4):代码库设置<br>接下来开启gh-pages功能，点击界面右侧的Settings，你将会打开这个库的setting页面，向下拖动，直到看见GitHub Pages，如图：</p>
+<p>点击Automatic page generator，Github将会自动替你创建出一个gh-pages的页面。 如果你的配置没有问题，那么大约15分钟之后，yourname.github.io这个网址就可以正常访问了~ 如果yourname.github.io已经可以正常访问了，那么Github一侧的配置已经全部结束了。<br>到此搭建hexo博客的相关环境配置已经完成，下面开始讲解Hexo的相关配置<br>2： Hexo安装<br>2.1.1：在自己认为合适的地方创建一个文件夹，这里我以E：/hexo 为例子讲解，        首先在E盘目录下创建Hexo文件夹，并在命令行的窗口进入到该目录</p>
+<p>在命令行中输入npm install hexo-cli -g</p>
+<p>然后你将会看到如下:</p>
+<p>可能你会看到一个WARN，但是不用担心，这不会影响你的正常使用。 然后输入：npm install hexo –save<br>然后你会看到命令行窗口刷了一大堆白字，下面我们来看一看Hexo是不是已经安装好了。 在命令行中输入： hexo -v  如果你看到了如图文字，则说明已经安装成功了。</p>
+<p>Hexo的相关配置<br>1：初始化hexo,接着上面的操作输入：hexo init<br>然后接着输入npm install之后npm将会自动安装你需要的组件，只需要等待npm操作即可。<br>2：首次体验Hexo继续输入命令hexo g显示如下数据</p>
+<p>然后在输入：hexo s然后显示如下信息可访问本地微博<br>INFO Hexo is running at <a href="http://0.0.0.0:4000/" target="_blank" rel="external">http://0.0.0.0:4000/</a>. Press Ctrl+C to stop.<br>在浏览器中打开<a href="http://localhost:4000/，你将会看到：" target="_blank" rel="external">http://localhost:4000/，你将会看到：</a></p>
+<p>3：将Hexo与gitHub page关联<br>大概分为以下几步 </p>
+<pre><code>- 配置git个人信息 
+- 配置Deployment
+</code></pre><p>1) 配置Git个人信息： 如果你之前已经配置好git个人信息，请跳过这一个 步骤，直接来到</p>
+<ol>
+<li>设置Git的user name和email：(如果是第一次的话)<br>git config –global user.name “cai”<br>git config –global user.email “987903100@qq.com”<ol>
+<li>生成秘钥<br>ssh-keygen -t rsa-C “987903100@qq.com”<br>2) 配置Deployment<br>找到 _config.yml添加如下代码：<br>deploy:<br>type: git<br>repo: git@github.com:shazicai/shazicai.github.io.git<br>branch: master<br>备注：repo配置与仓库名想对应shazicai改为自己的仓库名称</li>
+</ol>
+</li>
+</ol>
+<p>3) 登录github，找到项目，设置setting，找到GitHub Pages </p>
+<p>4): 在master分支下的CNAME.MD文件写入注册的域名 </p>
+<p>输入绑定域名就可访问本地提交微博页面</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/14/demo/" data-id="cj7k30nlt0000esqsy7a9trjd" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/09/14/demo/" data-id="cj7k3a1un0000nsqsrjc8qcgx" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -133,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/09/11/hello-world/" data-id="cj7k30nmg0001esqsagv8nac2" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/09/11/hello-world/" data-id="cj7k3a1ut0001nsqs2h6suxt0" class="article-share-link">Delen</a>
       
       
     </footer>
@@ -158,7 +191,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a></li></ul>
     </div>
@@ -168,7 +201,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
@@ -193,7 +226,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Li Zhou<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
